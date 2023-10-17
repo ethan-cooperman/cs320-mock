@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cs320-mock/static/css/main.81dcf19d.css",
+    "main.js": "/cs320-mock/static/js/main.e470e759.js",
+    "index.html": "/cs320-mock/index.html",
+    "main.81dcf19d.css.map": "/cs320-mock/static/css/main.81dcf19d.css.map",
+    "main.e470e759.js.map": "/cs320-mock/static/js/main.e470e759.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81dcf19d.css",
+    "static/js/main.e470e759.js"
+  ]
+}
