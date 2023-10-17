@@ -1,4 +1,4 @@
-import "../styles/main.css";
+import "/Users/ethancooperman/Desktop/CS32/Sprints/mock-deployed/src/styles/main.css";
 import { Dispatch, SetStateAction } from "react";
 
 /**
@@ -6,7 +6,7 @@ import { Dispatch, SetStateAction } from "react";
  */
 interface ControlledInputProps {
   // Remember that parameter names don't necessarily need to overlap;
-// I could use different variable names in the actual function.
+  // I could use different variable names in the actual function.
   value: string;
   // This type comes from React+TypeScript. VSCode can suggest these.
   //   Concretely, this means "a function that sets a state containing a string"
@@ -23,7 +23,7 @@ interface ControlledInputProps {
  */
 export function ControlledInput({
   // Input boxes contain state. We want to make sure React is managing that state,
-//   so we have a special component that wraps the input box.
+  //   so we have a special component that wraps the input box.
   value,
   setValue,
   ariaLabel,

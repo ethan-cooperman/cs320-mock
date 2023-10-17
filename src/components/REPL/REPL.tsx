@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "/src/styles/main.css";
+import "/Users/ethancooperman/Desktop/CS32/Sprints/mock-deployed/src/styles/main.css";
 import REPLHistory from "./REPLHistory";
 import { REPLInput } from "./REPLInput";
 import evaluate from "../Evaluate";

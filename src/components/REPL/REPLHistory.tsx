@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/src/styles/main.css";
+import "/Users/ethancooperman/Desktop/CS32/Sprints/mock-deployed/src/styles/main.css";
 import DataTable from "../DataTable";
 
 /**
@@ -22,28 +22,48 @@ function REPLHistory(props: REPLHistoryProps) {
       {props.history.map((x: [string, string | string[][], boolean], index) =>
         typeof x[1] === "string" ? (
           props.showVerbose ? (
-            <div className="response-box" aria-label={"string verbose" + index} key={index}>
-              <div className="command" aria-label={"command" + index}>Command: {x[0]} </div>
+            <div
+              className="response-box"
+              aria-label={"string verbose" + index}
+              key={index}
+            >
+              <div className="command" aria-label={"command" + index}>
+                Command: {x[0]}{" "}
+              </div>
               <div className={x[2] ? "success-message" : "error-message"}>
                 Output: {x[1]}
               </div>
             </div>
           ) : (
-            <div className="response-box" aria-label={"string normal" + index} key={index}>
+            <div
+              className="response-box"
+              aria-label={"string normal" + index}
+              key={index}
+            >
               <div className={x[2] ? "success-message" : "error-message"}>
                 {x[1]}
               </div>
             </div>
           )
         ) : props.showVerbose ? (
-          <div className="response-box" aria-label={"datatable" + index} key={index}>
-            <div className="command" aria-label={"command" + index}>Command: {x[0]} </div>
+          <div
+            className="response-box"
+            aria-label={"datatable" + index}
+            key={index}
+          >
+            <div className="command" aria-label={"command" + index}>
+              Command: {x[0]}{" "}
+            </div>
             <div className={x[2] ? "success-message" : "error-message"}>
               Output: <DataTable data={x[1]} />
             </div>
           </div>
         ) : (
-          <div className="response-box" aria-label={"datatable" + index} key={index}>
+          <div
+            className="response-box"
+            aria-label={"datatable" + index}
+            key={index}
+          >
             <div className={x[2] ? "success-message" : "error-message"}>
               <DataTable data={x[1]} />
             </div>

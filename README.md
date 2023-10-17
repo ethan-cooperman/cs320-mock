@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Mock-ecooperm-ryhuang
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## PROJECT: Mock
 
-## Available Scripts
+Team members: Ethan Cooperman ecooperm, Ryan Huang ryhuang
 
-In the project directory, you can run:
+Estimated time to complete: 15.0 hours.
 
-### `npm start`
+Github repo: https://github.com/cs0320-f23/mock-ecooperm-ryhuang
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## DESIGN CHOICES:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Created a ControlledInput file to make sure that all the inputs are formatted uniformally in the same area in the screen.
+2. All prior history of user inputs are logged and shown on screen. This is made possible through out REPLHistory.tsx file that stores incoming inputs and maps all the inputs onto the screen.
+3. REPL input separately handles user inputs from the command line/bar.
+4. The success and error responses are handled in Evaluate.ts. The evaluate method in there evaluates whether an input should show an error response or show a datatable/output string. It also handles mode changing (which is also a part of user input).
+5. Whenever we want to view a csv file or show the rows corresponding to a search query, we display this as a neat HTML table.
+6. To mimick the behaviors of load, search, and view, we created mock classes for each of these.
+7. Overall style of the application was defined in the css files.
 
-### `npm test`
+## BUGS:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We do not believe that there are any outstanding bugs in our Mock implementation at this time.
 
-### `npm run build`
+## EXAMPLE USAGE:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure the server is running first!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Go to http://localhost:8000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Command Line Inputs:
 
-### `npm run eject`
+Loads a file to the server: load_file [csv file]
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Views the file: view
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Searches the file:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. search [column name] [value]
+2. search [column index] [value]
+3. search [value]
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## TESTS:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. App.spec.ts: Tested that the application shows the command input bar and button (with working functionalities)
+2. Load.spec.ts: Tested that the load command is able to properly load a csv file with correct outputs onto the screen. We also tested mode switching to ensure that load would still ouptut the correct strings.
+3. View.spec.ts: Tested that the view command is able to view a loaded csv file and output the correct datatable onto the screen. We also tested edge cases like viewing when no file is loaded.
+4. Search.spec.ts: Tested that the search command is able to search a loaded csv file (and ensured that this works with different search types)

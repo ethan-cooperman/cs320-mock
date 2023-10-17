@@ -1,4 +1,4 @@
-import "/src/styles/main.css";
+import "/Users/ethancooperman/Desktop/CS32/Sprints/mock-deployed/src/styles/main.css";
 import { Dispatch, SetStateAction, useState } from "react";
 import { ControlledInput } from "../ControlledInput";
 
@@ -27,7 +27,12 @@ export function REPLInput(props: REPLInputProps) {
           ariaLabel={"Command input"}
         />
       </fieldset>
-      <button aria-label={"button"} onClick={() => props.parseInput(commandString)}>Submit</button>
+      <button
+        aria-label={"button"}
+        onClick={() => props.parseInput(commandString)}
+      >
+        Submit
+      </button>
     </div>
   );
 }

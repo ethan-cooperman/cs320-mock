@@ -1,7 +1,7 @@
 import React from "react";
 import REPLHistory from "./REPL/REPLHistory";
-import "../styles/App.css";
-import "../styles/main.css";
+import "/Users/ethancooperman/Desktop/CS32/Sprints/mock-deployed/src/styles/main.css";
+import "/Users/ethancooperman/Desktop/CS32/Sprints/mock-deployed/src/styles/App.css";
 import REPL from "./REPL/REPL";
 import { useState } from "react";
 
